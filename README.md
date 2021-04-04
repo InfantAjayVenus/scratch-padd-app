@@ -4,6 +4,8 @@
 
 This is a simple notes taking app.
 
+Check out the [color palette](https://coolors.co/2d2d2d-17283a-eef0f2-119822-f17300) used in this app.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
