@@ -1,31 +1,70 @@
-import React from 'react';
-import './App.scss';
+import React from "react";
+import { Helmet } from "react-helmet";
+import { EuiIcon, EuiButtonIcon } from "@elastic/eui";
+import { HashRouter as Router, Switch, Link, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Editor from './pages/Editor';
+import "./App.scss";
 
 function App() {
   return (
     <>
-      <header>Scratch Padd</header>
-      <main>
-        <nav>
-        {/*This part holds the menu items of the app*/}
+      <Helmet>
+        <title>Scratch Padd - A Notes taking app for learners </title>
+      </Helmet>
+      <header className="header">
+        <EuiIcon
+          type="logo.svg"
+          color="ghost"
+          title="Scratch Padd"
+          className="title"
+        />
+        <EuiButtonIcon
+          iconType="user"
+          display="fill"
+          iconSize="l"
+          color="text"
+          className="avatar"
+        />
+      </header>
+      <Router>
+        <nav className="navigation">
+          {/*This part holds the menu items of the app*/}
+          <ul>
+            <li>
+              <Link to="/">
+                <EuiButtonIcon
+                  iconType="home"
+                  iconSize="l"
+                  title="Home"
+                  className="button "
+                />
+              </Link>
+            </li>
+            <li>
+              <Link to="/newpadd">
+                <EuiButtonIcon
+                  iconType="plusInCircle"
+                  iconSize="l"
+                  title="Add New Padd"
+                  className="button"
+                />
+              </Link>
+            </li>
+          </ul>
         </nav>
-        <aside>
-        {/*
-            This Part holds the content of each menu.
-            It pops as a model, spanning whole viewport in mobile and width decreases as screen width expands.
-        */}
-        </aside>
-        <section>
-        {/*
-          This contains the contents of the app
-          1. editor
-          2. Pads list
-          3. Pad content
-        */}
+        <section className="body">
+        <Switch >
+          <Route exact path="/"><Home /></Route>
+        </Switch>
+        <Switch >
+          <Route exact path="/newpadd"><Editor /></Route>
+        </Switch>
+
         </section>
-      </main>
+      </Router>
       <footer>
-      {/*
+        {/*
         This contains the meta badges
         1. save status
         2. editor preview

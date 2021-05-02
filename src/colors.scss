@@ -1,0 +1,19 @@
+@import '@elastic/eui/dist/eui_theme_light.css';
+@import './theme.scss';
+
+$euiColorPrimary: $paddBlueDark;
+$euiColorAccent: $paddBluePrimary;
+$euiColorFullShade: $paddBlack;
+$euiColorDarkestShade: $paddBlack;
+$euiColorInk: $paddBlack;
+$euiColorGhost: $paddWhite;
+$euiColorLightestShade: $paddWhite;
+$euiColorEmptyShade: $paddWhite;
+$euiColorSuccess: $paddOk;
+$euiColorDanger: $paddError;
+$euiColorWarning: $paddWarn;
+$euiColorLightShade: $paddBlueLight;
+$euiColorMediumShade: $paddBlueSecondary;
+$euiColorDark: $paddBlueAccent;
+
+

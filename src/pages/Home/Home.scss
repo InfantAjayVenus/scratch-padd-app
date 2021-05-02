@@ -1,0 +1,14 @@
+@import 'src/theme.scss';
+
+main {
+  display: flex;
+  align-items: center;
+
+  .cta {
+    @include setColor($paddBlueDark, $paddWhite);
+
+    * {
+      color: $paddWhite;
+    }
+  }
+}
