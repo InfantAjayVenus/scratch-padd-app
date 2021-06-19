@@ -1,20 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface HomeProps {}
-
-export const Home = (props: HomeProps) => {
+interface EditorProps {}
+export const Editor = (props: EditorProps) => {
   return (
     <motion.main
-      key="page.home"
-      initial={{ x: "100%" }}
+      key="page.editor"
+      initial={{ x: "-100%" }}
       animate={{ x: "0%" }}
-      exit={{ x: "100%" }}
+      exit={{ x: "-100%" }}
       transition={{
         duration: 0.7,
       }}
     >
-      Home
+      Editor
     </motion.main>
   );
 };
