@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Home } from "./pages/Home";
-import { Editor } from "./pages/Editor";
+import { NewPadd } from "./pages/NewPadd";
 import { Navbar } from "./components/Navbar";
 
 function App() {
@@ -17,14 +17,16 @@ function App() {
         />
       </header>
       <AnimatePresence>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/new-padd">
-            <Editor />
-          </Route>
-        </Switch>
+        <main className="overflow-hidden w-full h-5/6 p-4 my-auto lg:w-11/12 lg:ml-auto lg:h-full">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/new-padd">
+              <NewPadd />
+            </Route>
+          </Switch>
+        </main>
       </AnimatePresence>
     </Router>
   );

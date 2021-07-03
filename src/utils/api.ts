@@ -1,5 +1,6 @@
-export const getList = async () => {
-  const response = await fetch(`${process.env.REACT_APP_API_URL}/pads`)
-  const data = await response.json();
-  return data;
+import {Padd, IPadd} from '../models/Padd';
+export const getList = async (pageNumber: Number=1): Promise<Padd[]> => {
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/padds?page=${pageNumber}`)
+  const data: []  = await response.json();
+  return data.map((paddItem: IPadd) => new Padd(paddItem.id, paddItem.title, paddItem.description));
 }
