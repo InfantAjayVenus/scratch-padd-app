@@ -6,19 +6,19 @@ interface NavbarProps {}
 
 export const Navbar = (props: NavbarProps) => {
   return (
-    <section className="flex flex-row-reverse items-center justify-between absolute bottom-0 bg-paddBlueDark text-paddLight h-12 w-full md:h-10 lg:flex-col lg:h-full lg:w-12 lg:left-0 lg:top-10">
-      <nav className="flex flex-row-reverse justify-between items-center h-full max-w-2/3 bg-paddBlueDark text-paddLight lg:flex-col lg:justify-start lg:h-2/3 lg:w-full">
+    <section className="flex flex-row-reverse items-center justify-between fixed bottom-1 bg-paddBlueDark text-paddLight h-12 w-11/12 mx-auto inset-x-0 rounded-md md:w-8/12 md:h-10 lg:mx-0 lg:flex-col lg:h-full lg:w-12 lg:left-0 overflow-hidden box-border p-1 ">
+      <nav className="flex flex-row-reverse justify-between items-center h-full bg-paddBlueDark text-paddLight lg:flex-col lg:justify-start lg:h-2/3 lg:w-full overflow-hidden box-border">
         <NavLink
           exact
           to="/"
-          className="flex items-center justify-center text-white text-2xl transition-all duration-500 h-full w-12 mr-2 md:w-14 lg:w-12 lg:h-12 lg:m-0 "
+          className="flex items-center justify-center text-white text-2xl transition-all duration-500 h-full w-12 md:w-14 lg:w-full lg:h-10 lg:mx-0 lg:my-2 rounded"
           activeClassName="bg-paddBlueLight text-paddBlueDark"
         >
           <FiHome />
         </NavLink>
         <NavLink
           to="/new-padd"
-          className="flex items-center justify-center text-white text-2xl transition-all duration-500 h-full w-12 mr-2 md:w-14 lg:w-12 lg:h-12 lg:m-0 "
+          className="flex items-center justify-center text-white text-2xl transition-all duration-500 h-full w-12 mr-2 md:w-14 lg:w-full lg:h-10 lg:mx-0 lg:my-2 rounded"
           activeClassName="bg-paddBlueLight text-paddBlueDark"
         >
           <FiPlusCircle />

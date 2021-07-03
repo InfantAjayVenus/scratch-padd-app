@@ -4,25 +4,32 @@ module.exports = {
   // mode: "jit",
   theme: {
     colors: {
-      paddBlueDark: '#054A91',
-      paddBlueAccent: '#3E7CB1',
-      paddBlueSecondary: '#81A4CD',
-      paddBlueLight: '#DBE4EE',
-      paddWarnYellow: '#F1D900',
-      paddRedAccent: '#F17300',
-      paddGreen: '#089105',
-      paddBlack: '#011529',
-      paddBluePrimary: '#006FF1',
-      paddLight: '#F0F4F9'
+      paddBlueDark: "#2541B2",
+      paddBlueAccent: "#3E7CB1",
+      paddBlueSecondary: "#81A4CD",
+      paddBlueLight: "#DBE4EE",
+      paddWarnYellow: "#F1D900",
+      paddRedAccent: "#F17300",
+      paddGreen: "#089105",
+      paddBlack: "#011529",
+      paddBluePrimary: "#006FF1",
+      paddLight: "#F0F4F9",
     },
     maxWidth: {
-      '1/4': '25%',
-      '1/2': '50%',
-      '3/4': '75%',
-      '1/3': '33%',
-      '2/3': '66%'
+      "1/4": "25%",
+      "1/2": "50%",
+      "3/4": "75%",
+      "1/3": "33%",
+      "2/3": "66%",
     },
-    extend: {},
+    extend: {
+      width: {
+        "19/20": "95%",
+      },
+      zIndex: {
+        '-1': '-1'
+      }
+    },
   },
   variants: {},
   plugins: [],
