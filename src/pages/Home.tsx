@@ -16,6 +16,9 @@ export const Home = (props: HomeProps) => {
     .then((data: Padd[]) => {
       setList(data);
       setIsLoading(false);
+    }).catch(error => {
+      console.error(error);
+      setIsLoading(false);
     })
   }, []);
 
@@ -27,7 +30,7 @@ export const Home = (props: HomeProps) => {
         </div>
       )}
 
-      {list.length === 0 && (
+      {(!isLoading && list.length === 0) && (
         <div className="flex flex-col items-center justify-center w-full h-full">
           <FiSmile className="text-6xl font-thin text-paddBlueDark"/> 
           <h1 className="text-paddBlack text-center font-bold text-3xl">You haven't created any Padds yet</h1>
