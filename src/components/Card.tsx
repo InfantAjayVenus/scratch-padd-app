@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import className from "classnames";
 import { Padd } from "../models/Padd";
@@ -8,6 +9,12 @@ import {
   FiEdit2,
   FiTrash2,
 } from "react-icons/fi";
+=======
+import React, {useEffect, useRef} from "react";
+import className from "classnames";
+import { Padd } from "../models/Padd";
+import 'long-press-event';
+>>>>>>> 4720011 (WIP [home] feat: Fetch and List)
 
 interface CardProps {
   redirectUrl: string;
@@ -15,6 +22,7 @@ interface CardProps {
 }
 
 export const Card = (props: CardProps) => {
+<<<<<<< HEAD
   const [isSelected, setIsSelected] = useState(false);
   return (
     <li className=" my-1">
@@ -67,6 +75,28 @@ export const Card = (props: CardProps) => {
           </button>
         </li>
       </ul>
+=======
+  const rootRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    if(rootRef.current){
+      rootRef.current.addEventListener("long-press", (e) => console.log('long-presses', e))
+    }
+  }, [rootRef])
+
+  return (
+    <li className=" mb-1" ref={rootRef}>
+      <article
+        className={className(
+          "flex flex-col relative justify-between border border-paddBlueLight rounded bg-white hover:bg-paddLight px-2 pt-4 pb-2 lg:py-2 transition-all duration-500",
+        )}
+      >
+        <h1 className="text-xl font-bold max-w-prose">
+          {props.paddData.title}
+        </h1>
+        <p className="max-w-prose text-xs text-paddBlueSecondary">{props.paddData.description}</p>
+      </article>
+>>>>>>> 4720011 (WIP [home] feat: Fetch and List)
     </li>
   );
 };

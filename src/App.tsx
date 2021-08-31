@@ -7,7 +7,11 @@ import { Navbar } from "./components/Navbar";
 function App() {
   return (
     <Router>
+<<<<<<< HEAD
       <header className="flex bg-paddLight h-12 md:h-10 lg:justify-end shadow rounded-b-lg">
+=======
+      <header className="flex h-12 md:h-10 lg:justify-end shadow rounded-b-lg">
+>>>>>>> 4720011 (WIP [home] feat: Fetch and List)
         <img
           src="/logo.svg"
           alt="ScratchPadd"
